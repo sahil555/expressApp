@@ -1,0 +1,35 @@
+{
+  "name": "expressapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start8": "node -r esm .",
+    "start": "pm2-runtime start ecosystem.config.js --env production",
+    "debug": "DEBUG=* node -r esm .",
+    "dev": " node -r esm ./node_modules/nodemon/bin/nodemon.js .",
+    "test": "mocha ./test/*"
+  },
+  "mocha": {
+    "require": [
+      "esm"
+    ]
+  },
+  "author": "Sahil",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "express-basic-auth": "^1.2.0",
+    "helmet": "^4.2.0",
+    "mocha": "^8.2.1",
+    "nodemon": "^2.0.6",
+    "supertest": "^6.0.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.8.2",
+    "@typescript-eslint/parser": "^4.8.2",
+    "eslint": "^7.14.0"
+  }
+}

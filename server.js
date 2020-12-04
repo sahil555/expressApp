@@ -10,10 +10,10 @@ import { rootRouter } from './routes';
 async function main() {
     registerMiddlewares(server);
 
-    server.all('/', (req,res) => res.redirect('/v1'));
+    server.all('/', (req,res) => res.redirect('/api/'));
 
 
-    server.use('/v1', rootRouter);
+    server.use('/api/', rootRouter);
  
     // server.get('/get', (request, response, next) => {
     //     response.json({message:'Here we are Handling '+ request.method });
